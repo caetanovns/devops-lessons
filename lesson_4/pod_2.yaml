@@ -1,7 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: primeiro-pod
+  name: pod-2
+  labels:
+    app: second-pod
 spec:
   containers:
     - name: nginx-container

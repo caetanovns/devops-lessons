@@ -5,9 +5,9 @@
 class Calc():
     """Class da Calculadora"""
 
-    def sum(self, input_one, input_two):
+    def sum(self, a, b):
         '''Soma 2 números'''
-        return input_one + input_two
+        return a + b
 
     def sub(self, input_one, input_two):
         '''Subtrai 2 números'''

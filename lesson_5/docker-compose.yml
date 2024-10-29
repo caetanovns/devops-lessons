@@ -1,0 +1,37 @@
+version: '3'
+services:
+  node_1:
+    build: ./node_1
+    ports:
+      - "5001:5001"
+    networks:
+      - load_balance
+
+  node_2:
+    build: ./node_2
+    ports:
+      - "5002:5002"
+    networks:
+      - load_balance
+
+  node_3:
+    build: ./node_3
+    ports:
+      - "8080:8080"
+    networks:
+      - load_balance
+
+  nginx:
+    build: ./load_balance
+    ports:
+    - "10000:10000"
+    depends_on:
+    - node_1
+    - node_2
+    - node_3
+    networks:
+      - load_balance
+
+networks:
+  load_balance:
+    driver: bridge

@@ -7,7 +7,7 @@ class Calc():
 
     def sum(self, input_one, input_two):
         '''Soma 2 números'''
-        return input_one * input_two
+        return input_one + input_two
 
     def sub(self, input_one, input_two):
         '''Subtrai 2 números'''

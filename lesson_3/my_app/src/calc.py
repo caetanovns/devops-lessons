@@ -3,7 +3,6 @@
 
 
 class Calc():
-    """Class da Calculadora"""
 
     def sum(self, a, b):
         '''Soma 2 números'''
